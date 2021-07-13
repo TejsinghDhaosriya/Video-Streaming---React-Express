@@ -17,6 +17,5 @@
   },
   "homepage": "https://github.com/TejsinghDhaosriya/Video-Streaming---React-Express#readme",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "express": "^4.17.1" }
 }

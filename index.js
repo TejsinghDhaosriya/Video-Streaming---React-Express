@@ -5,7 +5,7 @@ const fs = require("fs");
 app.get("/", (req, res) => {
   
   const range = req.headers.range;
-  const videoPath = "eco.mp4";
+  const videoPath = "infinity.mp4";
   const videoSize = fs.statSync(videoPath).size;
 
   //Splitting in 1mb
