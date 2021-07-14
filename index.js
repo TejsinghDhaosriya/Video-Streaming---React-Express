@@ -3,14 +3,12 @@ const app = express();
 
 const fs = require("fs");
 app.get("/", (req, res) => {
-  
   const range = req.headers.range;
   const videoPath = "infinity.mp4";
   const videoSize = fs.statSync(videoPath).size;
 
-  //Splitting in 1mb
   const chunkSize = 1 * 1e6;
-  //Changing it to number
+
   const start = Number(range.replace(/\D/g, ""));
   console.log(start);
   const end = Math.min(start + chunkSize, videoSize - 1);
@@ -29,4 +27,4 @@ app.get("/", (req, res) => {
   stream.pipe(res);
 });
 
-app.listen(4000);
+app.listen(process.env.PORT || 4000);
