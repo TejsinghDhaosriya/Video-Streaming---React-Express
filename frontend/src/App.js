@@ -1,10 +1,11 @@
 import ReactPlayer from "react-player";
 import "./App.css";
+import { baseUrl } from "./baseUrl";
 function App() {
   return (
     <div className="App">
       <ReactPlayer
-        url="http://localhost:4000"
+        url={baseUrl}
         className="react-player"
         playing
         width="100%"
