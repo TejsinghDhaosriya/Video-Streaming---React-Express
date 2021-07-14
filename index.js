@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
   const videoPath = "infinity.mp4";
   const videoSize = fs.statSync(videoPath).size;
 
-  const chunkSize = 2 * 1e6;
+  const chunkSize = 1 * 1e6;
 
   const start = Number(range.replace(/\D/g, ""));
   console.log(start);
